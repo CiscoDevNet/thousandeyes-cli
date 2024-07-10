@@ -12,6 +12,24 @@ APIs can be complex and intimidating for users, often requiring a significant in
 
 ThousandEyes-CLI serves as an intuitive translator between Cisco command-line syntax and the ThousandEyes API, streamlining the user experience.
 
+## What You’ll Learn
+
+By using ThousandEyes-CLI, you will learn how to:
+
+- Navigate and execute commands in a CLI environment.
+- Interact with the ThousandEyes API using simplified commands.
+- Output and manage data in various formats like JSON, YAML, CSV, and human-readable text.
+- Set and use environment variables to streamline your workflow.
+
+## What You’ll Need
+
+To use ThousandEyes-CLI, you will need:
+
+- A computer with Python installed.
+- Access to the command line terminal.
+- The ThousandEyes API Bearer Token.
+- Basic knowledge of command-line operations and syntax.
+
 ## Key Features
 
 - **Usability**: Designed for ease of use and extensibility.
@@ -21,7 +39,7 @@ ThousandEyes-CLI serves as an intuitive translator between Cisco command-line sy
 
 ## Getting Started
 
-Before using ThousandEyes-CLI, ensure Python is installed on your system. Install the necessary Python libraries with the following command:
+Before using ShowAP-Eyes, ensure Python is installed on your system. Install the necessary Python libraries with the following command:
 
 ```shell
 pip install -r requirements.txt
@@ -47,7 +65,7 @@ ThousandEyes-CLI requires these Python libraries:
 ## Usage Instructions
 
 1. Open a command line terminal.
-2. Navigate to the directory with the ThousandEyes-CLI.py script.
+2. Navigate to the directory with the thousandeyes-cli.py script.
 3. Execute the script:
 
 ```shell
@@ -79,7 +97,7 @@ python thousandeyes-cli.py
 show accounts
 ```
 
-- Display all accounts and change the output format to CSV:
+- Change output format to CSV:
 
 ```shell
 show accounts file csv
@@ -117,6 +135,10 @@ setx TE_BEARER "your_token_here"
 
 **Note**: After setting the environment variable, restart your terminal or command prompt.
 
+## Important Disclaimer
+
+ThousandEyes-CLI is a community-created and maintained tool. It is not supported by the ThousandEyes support team or engineering. Users should utilize this tool with the understanding that it is independent of official ThousandEyes resources.
+
 ## Conclusion
 
-ThousandEyes-CLI simplifies the interaction with the ThousandEyes API by providing a user-friendly CLI tool. By following the instructions above, users can quickly start leveraging the power of ThousandEyes with the convenience of familiar command-line operations.
+Congratulations on taking the first step towards simplifying your interactions with the ThousandEyes API using the ThousandEyes-CLI tool. You've equipped yourself with a powerful command-line interface that enhances your productivity and bridges the gap between Cisco CLI familiarity and API complexity.
