@@ -2,7 +2,7 @@
 
 ## Introduction
 
-ThousandEyes-CLI is a Command Line Interface designed to facilitate interactions with the ThousandEyes API. It offers a familiar experience to Cisco device users through a set of "show" commands, mirroring the functionality of a network operating system CLI.
+ThousandEyes-CLI is a Command Line Interface designed to facilitate interactions with the ThousandEyes API. It offers a familiar experience to Cisco device users through a set of `show` commands, mirroring the functionality of a network operating system CLI.
 
 ## Problem Statement
 
