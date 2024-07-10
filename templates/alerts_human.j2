@@ -1,0 +1,20 @@
+{% for alert in data.alerts %}
+Alert ID: {{ alert.id|default('None') }}
+Alert Type: {{ alert.alertType|default('None') }}
+Start Date: {{ alert.startDate|default('None') }}
+End Date: {{ alert.endDate|default('None') }}
+Violation Count: {{ alert.violationCount|default('None') }}
+Duration: {{ alert.duration|default('None') }}
+Alert Rule ID: {{ alert.alertRuleId|default('None') }}
+Alert State: {{ alert.alertState|default('None') }}
+Alert Severity: {{ alert.alertSeverity|default('None') }}
+
+Links:
+- Rule: {{ alert._links.rule.href|default('None') if alert._links.rule else 'None' }}
+- App Link: {{ alert._links.appLink.href|default('None') if alert._links.appLink else 'None' }}
+- Self: {{ alert._links.self.href|default('None') if alert._links.self else 'None' }}
+
+{% if not loop.last %}
+----------------------------------------------
+{% endif %}
+{% endfor %}

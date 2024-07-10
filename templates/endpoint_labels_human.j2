@@ -1,0 +1,47 @@
+{% for label in data.labels %}
+Label ID: {{ label.id | default('None') }}
+Label Name: {{ label.name | default('None') }}
+Label Color: {{ label.color | default('None') }}
+Label Match Type: {{ label.matchType | default('None') }}
+Label Filters:
+  {% for filter in label.filters %}
+  Filter Key: {{ filter.key | default('None') }}
+  Filter Mode: {{ filter.mode | default('None') }}
+  Filter Values: 
+    {% for value in filter.values %}
+    {{ value | default('None') }}
+    {% endfor %}
+  {% endfor %}
+Label Links:
+  Self Link:
+    Href: {{ label._links.self.href | default('None') }}
+    Templated: {{ label._links.self.templated | default('None') }}
+    Type: {{ label._links.self.type | default('None') }}
+    Deprecation: {{ label._links.self.deprecation | default('None') }}
+    Name: {{ label._links.self.name | default('None') }}
+    Profile: {{ label._links.self.profile | default('None') }}
+    Title: {{ label._links.self.title | default('None') }}
+    Hreflang: {{ label._links.self.hreflang | default('None') }}
+----------------------------------------------
+{% endfor %}
+Links:
+  {% if data._links.next is defined %}
+  Next Link:
+    Href: {{ data._links.next.href | default('None') }}
+    Templated: {{ data._links.next.templated | default('None') }}
+    Type: {{ data._links.next.type | default('None') }}
+    Deprecation: {{ data._links.next.deprecation | default('None') }}
+    Name: {{ data._links.next.name | default('None') }}
+    Profile: {{ data._links.next.profile | default('None') }}
+    Title: {{ data._links.next.title | default('None') }}
+    Hreflang: {{ data._links.next.hreflang | default('None') }}
+  {% endif %}
+  Self Link:
+    Href: {{ data._links.self.href | default('None') }}
+    Templated: {{ data._links.self.templated | default('None') }}
+    Type: {{ data._links.self.type | default('None') }}
+    Deprecation: {{ data._links.self.deprecation | default('None') }}
+    Name: {{ data._links.self.name | default('None') }}
+    Profile: {{ data._links.self.profile | default('None') }}
+    Title: {{ data._links.self.title | default('None') }}
+    Hreflang: {{ data._links.self.hreflang | default('None') }}

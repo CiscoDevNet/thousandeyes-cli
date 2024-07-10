@@ -1,0 +1,5 @@
+"Interval", "Alerts Enabled", "Enabled", "Created By", "Created Date", "Description", "Live Share", "Modified By", "Modified Date", "Saved Event", "Test ID", "Test Name", "Type", "Self Link", "Test Results Links"
+{% for test in data.tests -%}
+"{{ test.interval|default('None') }}", "{{ test.alertsEnabled|default('None') }}", "{{ test.enabled|default('None') }}", "{{ test.createdBy|default('None') }}", "{{ test.createdDate|default('None') }}", "{{ test.description|default('None') }}", "{{ test.liveShare|default('None') }}", "{{ test.modifiedBy|default('None') }}", "{{ test.modifiedDate|default('None') }}", "{{ test.savedEvent|default('None') }}", "{{ test.testId|default('None') }}", "{{ test.testName|default('None') }}", "{{ test.type|default('None') }}", "{{ test._links.self.href|default('None') if test._links.self else 'None' }}",
+{% for result in test._links.testResults %}"{{ result.href }}"{% if not loop.last %},{% endif %}{% endfor %}
+{% endfor %}

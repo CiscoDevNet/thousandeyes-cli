@@ -1,0 +1,25 @@
+{% for test in data.tests %}
+Test Name: {{ test.testName | default('None') }}
+Test ID: {{ test.testId | default('None') }}
+Created Date: {{ test.createdDate | default('None') }}
+Modified Date: {{ test.modifiedDate | default('None') }}
+Interval: {{ test.interval | default('None') }}
+Is Enabled: {{ test.isEnabled | default('None') }}
+Is Saved Event: {{ test.isSavedEvent | default('None') }}
+Has Path Trace In Session: {{ test.hasPathTraceInSession | default('None') }}
+Network Measurements: {{ test.networkMeasurements | default('None') }}
+Port: {{ test.port | default('None') }}
+Protocol: {{ test.protocol | default('None') }}
+Server: {{ test.server | default('None') }}
+AID: {{ test.aid.aid if test.aid is defined else 'None' }}
+Type: {{ test.type | default('None') }}
+Max Machines: {{ test.agentSelectorConfig.maxMachines | default('None') }}
+Self Link: {{ test._links.self.href | default('None') }}
+Test Results:
+  {% for link in test._links.testResults -%}
+  Href: {{ link.href }}
+  {%- endfor %}
+----------------------------------------------
+{% endfor %}
+Links:
+  Self Link: {{ data._links.self.href | default('None') }}

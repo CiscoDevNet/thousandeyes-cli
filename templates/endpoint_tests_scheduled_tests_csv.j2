@@ -1,0 +1,7 @@
+"Test Created Date", "Test Interval", "Is Enabled", "Is Saved Event", "Has Path Trace In Session", "Test Modified Date", "Network Measurements", "Test Port", "Test Protocol", "Test Server", "Test Id", "Test AID", "Test Name", "Test Type", "Max Machines", "Test Results Hrefs", "Self Link Href"{% for test in data.tests -%}
+{% set test_results_hrefs = [] -%}
+{% for link in test._links.testResults -%}
+{% set test_results_hrefs = test_results_hrefs + [link.href] -%}
+{% endfor -%}
+"{{ test.createdDate | default('None') }}", "{{ test.interval | default('None') }}", "{{ test.isEnabled | default('None') }}", "{{ test.isSavedEvent | default('None') }}", "{{ test.hasPathTraceInSession | default('None') }}", "{{ test.modifiedDate | default('None') }}", "{{ test.networkMeasurements | default('None') }}", "{{ test.port | default('None') }}", "{{ test.protocol | default('None') }}", "{{ test.server | default('None') }}", "{{ test.testId | default('None') }}", "{% if test.aid is defined -%}{{ test.aid.aid | default('None') }}{% else -%}None{% endif -%}", "{{ test.testName | default('None') }}", "{{ test.type | default('None') }}", "{{ test.agentSelectorConfig.maxMachines | default('None') }}", "{{ ', '.join(test_results_hrefs) }}", "{{ test._links.self.href | default('None') }}"
+{% endfor -%}

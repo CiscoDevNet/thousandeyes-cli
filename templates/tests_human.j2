@@ -1,0 +1,23 @@
+{% for test in data.tests %}
+Test Name: {{ test.testName|default('None') }}
+Test ID: {{ test.testId|default('None') }}
+Type: {{ test.type|default('None') }}
+Created By: {{ test.createdBy|default('None') }}
+Created Date: {{ test.createdDate|default('None') }}
+Modified By: {{ test.modifiedBy|default('None') }}
+Modified Date: {{ test.modifiedDate|default('None') }}
+Description: {{ test.description|default('None') }}
+Interval: {{ test.interval|default('None') }}
+Alerts Enabled: {{ test.alertsEnabled|default('None') }}
+Enabled: {{ test.enabled|default('None') }}
+Live Share: {{ test.liveShare|default('None') }}
+Saved Event: {{ test.savedEvent|default('None') }}
+
+Links:
+Self: {{ test._links.self.href|default('None') if test._links.self else 'None' }}
+Test Results:
+{% for result in test._links.testResults %}
+  - {{ result.href }}
+{% endfor %}
+{% if not loop.last %}----------------------------------------------{% endif %}
+{% endfor %}

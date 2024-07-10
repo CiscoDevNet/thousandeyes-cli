@@ -1,0 +1,25 @@
+{% for window in data.alertSuppressionWindows %}
+Alert Suppression Window ID: {{ window.alertSuppressionWindowId|default('None') }}
+Name: {{ window.name|default('None') }}
+Is Enabled: {{ window.isEnabled|default('None') }}
+Status: {{ window.status|default('None') }}
+Start Date: {{ window.startDate|default('None') }}
+Duration: {{ window.duration|default('None') }}
+
+Repeat:
+- Type: {{ window.repeat.type|default('None') if window.repeat else 'None' }}
+- Interval Type: {{ window.repeat.intervalType|default('None') if window.repeat else 'None' }}
+- Interval Length: {{ window.repeat.intervalLength|default('None') if window.repeat else 'None' }}
+- Days of Week: {{ ', '.join(window.repeat.daysOfWeek)|default('None') if window.repeat and window.repeat.daysOfWeek else 'None' }}
+
+End Repeat:
+- Type: {{ window.endRepeat.type|default('None') if window.endRepeat else 'None' }}
+- Count: {{ window.endRepeat.count|default('None') if window.endRepeat else 'None' }}
+- Date: {{ window.endRepeat.date|default('None') if window.endRepeat else 'None' }}
+
+Self Link: {{ window._links.self.href|default('None') if window._links.self else 'None' }}
+
+{% if not loop.last %}
+----------------------------------------------
+{% endif %}
+{% endfor %}

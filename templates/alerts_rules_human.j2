@@ -1,0 +1,22 @@
+{% for rule in data.alertRules %}
+Rule ID: {{ rule.ruleId|default('None') }}
+Rule Name: {{ rule.ruleName|default('None') }}
+Expression: {{ rule.expression|default('None') }}
+Direction: {{ rule.direction|default('None') }}
+Notify on Clear: {{ rule.notifyOnClear|default('None') }}
+Is Default: {{ rule.isDefault|default('None') }}
+Alert Type: {{ rule.alertType|default('None') }}
+Minimum Sources: {{ rule.minimumSources|default('None') }}
+Minimum Sources Percentage: {{ rule.minimumSourcesPct|default('None') }}%
+Rounds Violating Mode: {{ rule.roundsViolatingMode|default('None') }}
+Rounds Violating Out Of: {{ rule.roundsViolatingOutOf|default('None') }}
+Rounds Violating Required: {{ rule.roundsViolatingRequired|default('None') }}
+Include Covered Prefixes: {{ rule.includeCoveredPrefixes|default('None') }}
+Severity: {{ rule.severity|default('None') }}
+
+Self Link: {{ data._links.self.href|default('None') if data._links.self else 'None' }}
+
+{% if not loop.last %}
+----------------------------------------------
+{% endif %}
+{% endfor %}

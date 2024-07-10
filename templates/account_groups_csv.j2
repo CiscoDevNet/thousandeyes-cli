@@ -1,0 +1,4 @@
+"accountGroupName","AID"
+{% for group in data.accountGroups -%}
+"{{ group.accountGroupName }}","{{ group.aid }}"
+{% endfor %}

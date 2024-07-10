@@ -1,0 +1,3 @@
+{% for dashboard in data -%}
+"{{ dashboard.dashboardId | default('None') }}","{{ dashboard.title | default('None') }}","{{ dashboard.isBuiltIn | default('None') }}","{{ dashboard.aid | default('None') }}","{{ dashboard.dashboardCreatedBy | default('None') }}","{{ dashboard.dashboardModifiedBy | default('None') }}","{{ dashboard.dashboardModifiedDate | default('None') }}","{{ dashboard.isPrivate | default('None') }}","{{ dashboard.isDefaultForUser | default('None') }}","{{ dashboard.isDefaultForAccount | default('None') }}",
+{% endfor %}

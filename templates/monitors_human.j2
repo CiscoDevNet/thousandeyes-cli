@@ -1,0 +1,22 @@
+Monitors:
+{% for monitor in data.monitors %}
+    Country ID: {{ monitor.countryId | default('none') }}
+    Monitor ID: {{ monitor.monitorId | default('none') }}
+    IP Address: {{ monitor.ipAddress | default('none') }}
+    Network: {{ monitor.network | default('none') }}
+    Monitor Type: {{ monitor.monitorType | default('none') }}
+    Monitor Name: {{ monitor.monitorName | default('none') }}
+{% endfor %}
+
+{% if _links is defined %}
+Links:
+    Self:
+        Href: {{ _links.self.href | default('none') }}
+        Templated: {{ _links.self.templated | default('none') }}
+        Type: {{ _links.self.type | default('none') }}
+        Deprecation: {{ _links.self.deprecation | default('none') }}
+        Name: {{ _links.self.name | default('none') }}
+        Profile: {{ _links.self.profile | default('none') }}
+        Title: {{ _links.self.title | default('none') }}
+        Hreflang: {{ _links.self.hreflang | default('none') }}
+{% endif %}

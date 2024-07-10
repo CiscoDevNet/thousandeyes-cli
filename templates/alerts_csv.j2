@@ -1,0 +1,4 @@
+"ID", "Alert Type", "Start Date", "End Date", "Violation Count", "Duration", "Rule Link", "App Link", "Self Link", "Alert Rule ID", "Alert State", "Alert Severity"
+{% for alert in data.alerts -%}
+"{{ alert.id|default('None') }}", "{{ alert.alertType|default('None') }}", "{{ alert.startDate|default('None') }}", "{{ alert.endDate|default('None') }}", "{{ alert.violationCount|default('None') }}", "{{ alert.duration|default('None') }}", "{{ alert._links.rule.href|default('None') if alert._links.rule else 'None' }}", "{{ alert._links.appLink.href|default('None') if alert._links.appLink else 'None' }}", "{{ alert._links.self.href|default('None') if alert._links.self else 'None' }}", "{{ alert.alertRuleId|default('None') }}", "{{ alert.alertState|default('None') }}", "{{ alert.alertSeverity|default('None') }}"
+{% endfor %}

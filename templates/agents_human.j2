@@ -1,0 +1,52 @@
+{% for agent in data.agents %}
+Agent Name: {{ agent.agentName|default('None') }}
+Agent ID: {{ agent.agentId|default('None') }}
+Agent Type: {{ agent.agentType|default('None') }}
+Network: {{ agent.network|default('None') }}
+Location: {{ agent.location|default('None') }}
+Country ID: {{ agent.countryId|default('None') }}
+Enabled: {{ agent.enabled|default('None') }}
+Verify SSL Certificates: {{ agent.verifySslCertificates|default('None') }}
+IP Addresses: {{ agent.ipAddresses|join(', ')|default('None') }}
+Public IP Addresses: {{ agent.publicIpAddresses|join(', ')|default('None') }}
+
+{% if agent.clusterMembers %}
+Cluster Members:
+{% for member in agent.clusterMembers %}
+  - Name: {{ member.name|default('None') }}
+    IP Addresses: {{ member.ipAddresses|join(', ')|default('None') }}
+    Public IP Addresses: {{ member.publicIpAddresses|join(', ')|default('None') }}
+    Network: {{ member.network|default('None') }}
+{% endfor %}
+{% endif %}
+
+{% if agent.accountGroups %}
+Account Groups:
+{% for group in agent.accountGroups %}
+  - Name: {{ group.accountGroupName|default('None') }}
+    Aid: {{ group.aid|default('None') }}
+{% endfor %}
+{% endif %}
+
+Prefix: {{ agent.prefix|default('None') }}
+IPv6 Policy: {{ agent.ipv6Policy|default('None') }}
+Hostname: {{ agent.hostname|default('None') }}
+Last Seen: {{ agent.lastSeen|default('None') }}
+Agent State: {{ agent.agentState|default('None') }}
+Keep Browser Cache: {{ agent.keepBrowserCache|default('None') }}
+Created Date: {{ agent.createdDate|default('None') }}
+Target for Tests: {{ agent.targetForTests|default('None') }}
+Local Resolution Prefixes: {{ agent.localResolutionPrefixes|join(', ')|default('None') }}
+
+{% if agent.interfaceIpMappings %}
+Interface IP Mappings:
+{% for mapping in agent.interfaceIpMappings %}
+  - Interface Name: {{ mapping.interfaceName|default('None') }}
+    IP Addresses: {{ mapping.ipAddresses|join(', ')|default('None') }}
+{% endfor %}
+{% endif %}
+
+{% if not loop.last %}
+----------------------------------------------
+{% endif %}
+{% endfor %}

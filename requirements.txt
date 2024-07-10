@@ -1,0 +1,6 @@
+rich
+readline
+requests
+pyyaml
+jinja2
+prompt_toolkit

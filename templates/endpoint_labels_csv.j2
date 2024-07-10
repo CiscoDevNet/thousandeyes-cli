@@ -1,0 +1,12 @@
+"Label ID", "Label Name", "Label Color", "Label Match Type", "Label Filters", "Self Link Href", "Self Link Templated", "Self Link Type", "Self Link Deprecation", "Self Link Name", "Self Link Profile", "Self Link Title", "Self Link Hreflang"
+{% for label in data.labels -%}
+{% set filter_list = [] -%}
+{% for filter in label.filters -%}
+{% set filter_list = filter_list + [filter.key | default('None') + ': ' + ', '.join(filter.values)] -%}
+{%- endfor %}
+"{{ label.id | default('None') }}", "{{ label.name | default('None') }}", "{{ label.color | default('None') }}", "{{ label.matchType | default('None') }}", "{{ ', '.join(filter_list) }}", "{{ label._links.self.href | default('None') }}", "{{ label._links.self.templated | default('None') }}", "{{ label._links.self.type | default('None') }}", "{{ label._links.self.deprecation | default('None') }}", "{{ label._links.self.name | default('None') }}", "{{ label._links.self.profile | default('None') }}", "{{ label._links.self.title | default('None') }}", "{{ label._links.self.hreflang | default('None') }}"
+{%- endfor %}
+"Next Link Href", "Next Link Templated", "Next Link Type", "Next Link Deprecation", "Next Link Name", "Next Link Profile", "Next Link Title", "Next Link Hreflang"
+{% if data._links.next is defined -%}
+"{{ data._links.next.href | default('None') }}", "{{ data._links.next.templated | default('None') }}", "{{ data._links.next.type | default('None') }}", "{{ data._links.next.deprecation | default('None') }}", "{{ data._links.next.name | default('None') }}", "{{ data._links.next.profile | default('None') }}", "{{ data._links.next.title | default('None') }}", "{{ data._links.next.hreflang | default('None') }}"
+{%- endif %}

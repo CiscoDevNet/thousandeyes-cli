@@ -1,0 +1,39 @@
+{% for dashboard in data %}
+Dashboard:
+  ID: {{ dashboard.dashboardId | default("None") }}
+  Title: {{ dashboard.title | default("None") }}
+  Created By: {{ dashboard.dashboardCreatedBy | default("None") }}
+  Modified By: {{ dashboard.dashboardModifiedBy | default("None") }}
+  Modified Date: {{ dashboard.dashboardModifiedDate | default("None") }}
+  Private: {{ dashboard.isPrivate | default("None") }}
+  Default for User: {{ dashboard.isDefaultForUser | default("None") }}
+  Default for Account: {{ dashboard.isDefaultForAccount | default("None") }}
+
+  {% for widget in dashboard.widgets %}
+  Widget:
+    ID: {{ widget.id | default("None") }}
+    Type: {{ widget.type | default("None") }}
+    Title: {{ widget.title | default("None") }}
+    Visual Mode: {{ widget.visualMode | default("None") }}
+    Embed URL: {{ widget.embedUrl | default("None") }}
+    Is Embedded: {{ widget.isEmbedded | default("None") }}
+    Metric Group: {{ widget.metricGroup | default("None") }}
+    Direction: {{ widget.direction | default("None") }}
+    Metric: {{ widget.metric | default("None") }}
+    Measure: {{ widget.measure | default("None") }}
+    Fixed Timespan Value: {{ widget.fixedTimespan.value | default("None") }}
+    Fixed Timespan Unit: {{ widget.fixedTimespan.unit | default("None") }}
+    Should Exclude Alert Suppression Windows: {{ widget.shouldExcludeAlertSuppressionWindows | default("None") }}
+    DataSource: {{ widget.dataSource | default("None") }}
+
+    Filters:
+    {% for test in widget.filters.Tests %}
+      Test: {{ test | default("None") }}
+    {% endfor %}
+
+    _links:
+    {% for key, value in widget._links.self.items() %}
+      {{ key }}: {{ value | default("None") }}
+    {% endfor %}
+  {% endfor %}
+{% endfor %}

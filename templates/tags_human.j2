@@ -1,0 +1,21 @@
+{% for tag in data.tags %}
+    ID: {{ tag.get('id', None) }}
+    AID: {{ tag.get('aid', None) }}
+    Object Type: {{ tag.get('objectType', None) }}
+    Key: {{ tag.get('key', None) }}
+    Value: {{ tag.get('value', None) }}
+    Color: {{ tag.get('color', None) }}
+    Access Type: {{ tag.get('accessType', None) }}
+    Created Date: {{ tag.get('createdDate', None) }}
+    Links:
+        Rule:
+            Href: {{ tag.get('_links', {}).get('rule', {}).get('href', None) }}
+            Templated: {{ tag.get('_links', {}).get('rule', {}).get('templated', None) }}
+            Type: {{ tag.get('_links', {}).get('rule', {}).get('type', None) }}
+            Deprecation: {{ tag.get('_links', {}).get('rule', {}).get('deprecation', None) }}
+            Name: {{ tag.get('_links', {}).get('rule', {}).get('name', None) }}
+            Profile: {{ tag.get('_links', {}).get('rule', {}).get('profile', None) }}
+            Title: {{ tag.get('_links', {}).get('rule', {}).get('title', None) }}
+            Hreflang: {{ tag.get('_links', {}).get('rule', {}).get('hreflang', None) }}
+    -------------------------
+{% endfor %}

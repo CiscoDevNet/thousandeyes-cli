@@ -1,0 +1,78 @@
+Total Number of Agents: {{ data.totalAgents }}
+{% for agent in data.agents %}
+----------------------------------------------
+Agent ID: {{ agent.id }}
+Agent Name: {{ agent.name }}
+Computer Name: {{ agent.computerName }}
+OS Version: {{ agent.osVersion }}
+Platform: {{ agent.platform }}
+Kernel Version: {{ agent.kernelVersion }}
+Manufacturer: {{ agent.manufacturer }}
+Model: {{ agent.model }}
+Last Seen: {{ agent.lastSeen }}
+Status: {{ agent.status }}
+Deleted: {{ agent.deleted }}
+Version: {{ agent.version }}
+Created At: {{ agent.createdAt }}
+Number of Clients: {{ agent.numberOfClients }}
+Public IP: {{ agent.publicIP }}
+{% if agent.location %}
+Location: {{ agent.location.locationName }} ({{ agent.location.latitude }}, {{ agent.location.longitude }})
+{% else %}
+Location: N/A
+{% endif %}
+Total Memory: {{ agent.totalMemory }}
+Agent Type: {{ agent.agentType }}
+License Type: {{ agent.licenseType }}
+TCP Driver Available: {{ agent.tcpDriverAvailable }}
+npcap Version: {{ agent.npcapVersion }}
+
+Clients:
+{% for client in agent.clients %}
+  User: {{ client.userProfile.userName }}
+  Browser Extensions:
+  {% for extension in client.browserExtensions %}
+    Browser: {{ extension.browser }}
+    Profile: {{ extension.profile }}
+    Version: {{ extension.version }}
+    Enabled: {{ extension.enabled }}
+    Active: {{ extension.active }}
+    Error: {{ extension.error }}
+  {% endfor %}
+{% endfor %}
+
+VPN Profiles:
+{% for profile in agent.vpnProfiles %}
+  Interface Name: {{ profile.interfaceName }}
+  VPN Type: {{ profile.vpnType }}
+  VPN Gateway Address: {{ profile.vpnGatewayAddress }}
+  VPN Client Addresses: {{ profile.vpnClientAddresses[0] }}
+  VPN Client Network Range: {{ profile.vpnClientNetworkRange[0] }}
+{% endfor %}
+
+Network Interface Profiles:
+{% for profile in agent.networkInterfaceProfiles %}
+  Interface Name: {{ profile.interfaceName }}
+  Hardware Type: {{ profile.hardwareType }}
+  Address Profiles:
+  {% for address in profile.addressProfiles %}
+    Address Type: {{ address.addressType }}
+    IP Address: {{ address.ipAddress }}
+    Prefix Length: {{ address.prefixLength }}
+    Gateway: {{ address.gateway }}
+    Router Hardware Address: {{ address.routerHardwareAddress }}
+  {% endfor %}
+  Ethernet Profile Link Speed: {{ profile.ethernetProfile.linkSpeed }}
+  Wireless Profile:
+    BSSID: {{ profile.wirelessProfile.bssid }}
+    SSID: {{ profile.wirelessProfile.ssid }}
+    RSSI: {{ profile.wirelessProfile.rssi }}
+    Channel: {{ profile.wirelessProfile.channel }}
+    PHY Mode: {{ profile.wirelessProfile.phyMode }}
+{% endfor %}
+
+ASN Details:
+  AS Number: {{ agent.asnDetails.asNumber }}
+  AS Name: {{ agent.asnDetails.asName }}
+{% endfor %}
+----------------------------------------------
