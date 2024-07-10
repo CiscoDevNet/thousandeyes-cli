@@ -10,7 +10,7 @@ APIs can be complex and intimidating for users, often requiring a significant in
 
 ## Solution
 
-ThousandEyes-CLI serves as an intuitive translator between Cisco command-line zsyntax and the ThousandEyes API, streamlining the user experience.
+ThousandEyes-CLI serves as an intuitive translator between Cisco command-line syntax and the ThousandEyes API, streamlining the user experience.
 
 ## What You’ll Learn
 
