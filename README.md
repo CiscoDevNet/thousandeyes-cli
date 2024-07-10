@@ -82,7 +82,13 @@ Before you can start issuing commands, you'll need to enter your Bearer Token. T
 
 When prompted, paste your Bearer Token into the console. Make sure to keep your token secure and do not share it with others.
 
-![Token](./images/token.png)
+```
+# python3.11 thousandeyes-cli.py
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ ThousandEyes API Status: Accessible                                                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+Bearer Authentication Token:
+```
 
 ## Available Commands
 
