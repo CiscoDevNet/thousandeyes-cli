@@ -57,10 +57,11 @@ ThousandEyes-CLI requires these Python libraries:
 - rich
 - importlib
 - requests
-- yaml
+- pyyaml
 - json
 - datetime
 - jinja2
+- prompt_toolkit
 
 ## Usage Instructions
 
