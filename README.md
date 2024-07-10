@@ -115,7 +115,7 @@ show endpoints file human aid 1234
 show endpoints file human aid 1234 write
 ```
 
-**Persisting Environment Variables for Bearer Authentication**
+## Persisting Environment Variables for Bearer Authentication
 
 To streamline your workflow and eliminate the need to input your Bearer Authentication Token repeatedly, you can save it as a persistent environment variable on your system. Follow the instructions below for your specific operating system:
 
