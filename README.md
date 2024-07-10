@@ -39,7 +39,7 @@ To use ThousandEyes-CLI, you will need:
 
 ## Getting Started
 
-Before using ShowAP-Eyes, ensure Python is installed on your system. Install the necessary Python libraries with the following command:
+Before using ThousandEyes-CLI, ensure Python is installed on your system. Install the necessary Python libraries with the following command:
 
 ```shell
 pip install -r requirements.txt
