@@ -115,25 +115,39 @@ show endpoints file human aid 1234
 show endpoints file human aid 1234 write
 ```
 
-## Environment Variable
+**Persisting Environment Variables for Bearer Authentication**
 
-To avoid entering the Bearer Authentication Token each time, set the `TE_BEARER` environment variable:
+To streamline your workflow and eliminate the need to input your Bearer Authentication Token repeatedly, you can save it as a persistent environment variable on your system. Follow the instructions below for your specific operating system:
 
-- On macOS:
+**macOS and Linux:**
 
-```shell
-export TE_BEARER=your_token_here
-```
+1. Open the Terminal application.
+2. Type the following command, replacing `your_token_here` with your actual Bearer Authentication Token:
+   ```
+   echo 'export TE_BEARER="your_token_here"' >> ~/.bash_profile
+   ```
+   If you are using a shell other than bash, such as zsh (which is the default on newer versions of macOS), you should instead append the export command to the `~/.zshrc` file:
+   ```
+   echo 'export TE_BEARER="your_token_here"' >> ~/.zshrc
+   ```
+3. Save the changes and close the Terminal.
+4. To apply the changes immediately, you can source the profile file with the command `source ~/.bash_profile` for bash or `source ~/.zshrc` for zsh.
 
-- On Windows:
+**Windows:**
 
-```shell
-setx TE_BEARER "your_token_here"
-```
+1. Press `Win + R`, type `cmd`, and press `Enter` to open the Command Prompt.
+2. Enter the following command, again substituting `your_token_here` with your actual token:
+   ```
+   setx TE_BEARER "your_token_here" /M
+   ```
+   The `/M` flag sets the variable system-wide. If you omit this flag, the variable will be set for the current user only.
+3. Close the Command Prompt.
 
-*Replace `your_token_here` with your actual Bearer Authentication Token.*
+**Important Notes:**
 
-**Note**: After setting the environment variable, restart your terminal or command prompt.
+- After setting the environment variable, you may need to restart your terminal (macOS/Linux) or command prompt (Windows) for the changes to take effect.
+- For the changes to be recognized by applications that were running before setting the variable, you may need to restart those applications.
+- Environment variables set in this way will persist across system reboots, ensuring your Bearer Authentication Token is always readily available for your sessions.
 
 ## Important Disclaimer
 
