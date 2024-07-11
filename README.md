@@ -61,24 +61,25 @@ Welcome to the initial setup guide for ThousandEyes-CLI. To get started, you'll 
 
 1. **Download the ZIP File**
 
-   Begin by downloading the ZIP file containing the ThousandEyes-CLI source code and related files. You can find this file on this repository page.
+Begin by downloading the ZIP file containing the ThousandEyes-CLI source code and related files. You can find this file on this repository page.
    
 3. **Unzip the File**
 
-   Once the download is complete, locate the ZIP file on your computer and extract its contents. You can do this by right-clicking the file and selecting "Extract All..." on Windows, or by double-clicking the file on macOS.
+Once the download is complete, locate the ZIP file on your computer and extract its contents. You can do this by right-clicking the file and selecting "Extract All..." on Windows, or by double-clicking the file on macOS.
 
 4. **Navigate to the Directory**
 
-   Open your command line terminal. You will need to navigate to the directory where you've extracted the files. You can do this by using the `cd` (change directory) command followed by the path to the directory. For example:
+Open your command line terminal. You will need to navigate to the directory where you've extracted the files. You can do this by using the `cd` (change directory) command followed by the path to the directory. For example:
 
-   ```shell
-   cd path/to/thousandeyes-cli
+```shell
+cd path/to/thousandeyes-cli
+```
 
 Make sure to replace path/to/thousandeyes-cli with the actual path to the directory where you extracted the ThousandEyes-CLI files.
 
 5. **Install Dependencies**
 
-    Inside the ThousandEyes-CLI directory, you'll find a file named requirements.txt. This file lists all the Python libraries that need to be installed for the CLI tool to work properly. Install these dependencies by running the following command:
+Inside the ThousandEyes-CLI directory, you'll find a file named requirements.txt. This file lists all the Python libraries that need to be installed for the CLI tool to work properly. Install these dependencies by running the following command:
 
 ```shell
 pip install -r requirements.txt
