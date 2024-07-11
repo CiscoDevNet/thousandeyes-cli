@@ -278,23 +278,24 @@ Save your Bearer Token as an environment variable to avoid entering it every tim
 
 1. Open Terminal.
 2. Run this command, replacing `your_token_here` with your token:
-   ```
-   echo 'export TE_BEARER="your_token_here"' >> ~/.bash_profile
-   ```
-   For zsh (default on newer macOS), use `~/.zshrc` instead:
-   ```
-   echo 'export TE_BEARER="your_token_here"' >> ~/.zshrc
-   ```
-3. Restart the Terminal.
+
+```
+echo 'export TE_BEARER="your_token_here"' >> ~/.bash_profile
+```
+For zsh (default on newer macOS), use `~/.zshrc` instead:
+```
+echo 'export TE_BEARER="your_token_here"' >> ~/.zshrc
+```
+4. Restart the Terminal.
 
 **Windows:**
 
 1. Press `Win + R`, type `cmd`, and hit `Enter`.
 2. Type this command with your token:
-   ```
-   setx TE_BEARER "your_token_here" /M
-   ```
-   Use `/M` for a system-wide variable, or omit it for the current user only.
+```
+setx TE_BEARER "your_token_here" /M
+```
+Use `/M` for a system-wide variable, or omit it for the current user only.
 3. Restart Command Prompt.
 
 **Notes:**
