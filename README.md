@@ -101,13 +101,13 @@ python thousandeyes-cli.py
 
 ## Authentication
 
-You will need to authenticate with the ThousandEyes API using a Bearer Token. This token is a unique identifier that grants you access to the API and ensures secure communication between the CLI tool and ThousandEyes services.
+You will need to authenticate with the ThousandEyes API using a Bearer Token.
 
 To obtain your Bearer Token, follow the detailed steps provided in the ThousandEyes API documentation on authentication:
 
 [ThousandEyes API Authentication Guide](https://developer.cisco.com/docs/thousandeyes/authentication/#authentication)
 
-Once you have your Bearer Token, you can proceed to set it up within the CLI tool. You have the option to enter it each time you start a new session or save it as an environment variable for convenience, as described in the "Persisting Environment Variables for Bearer Authentication" section.
+You have the option to enter it each time you start a new session or save it as an environment variable for convenience, as described in the "Persisting Environment Variables for Bearer Authentication" section.
 
 When prompted, paste your Bearer Token into the console. Make sure to keep your token secure and do not share it with others.
 
@@ -150,11 +150,9 @@ thousandeyes# [command] [options]
 
 ### Emphasizing the Importance of the `aid` Parameter
 
-The `aid` parameter is crucial when you need to fetch information specific to a certain account group. Without specifying the correct `aid`, you may not retrieve the relevant data for the account group you intend to manage or analyze. The  `aid` Parameter can be obtained with the following command.
+The `aid` parameter is crucial when you need to fetch information specific to a certain account group. Without specifying the correct `aid`, you may not retrieve the relevant data for the account group you intend to manage or analyze. The `aid` Parameter can be obtained with the following command.
 
 ### The `show accounts` Command
-
-The `aid` parameter is crucial when you need to fetch information specific to a certain account group. Without specifying the correct `aid`, you may not retrieve the relevant data for the account group you intend to manage or analyze.
 
 The `show accounts` command retrieves information about the account groups you have access to. Here's how to use it:
 
@@ -326,7 +324,6 @@ To streamline your workflow and eliminate the need to input your Bearer Authenti
 **Important Notes:**
 
 - After setting the environment variable, you may need to restart your terminal (macOS/Linux) or command prompt (Windows) for the changes to take effect.
-- For the changes to be recognized by applications that were running before setting the variable, you may need to restart those applications.
 - Environment variables set in this way will persist across system reboots, ensuring your Bearer Authentication Token is always readily available for your sessions.
 
 ## Important Disclaimer
