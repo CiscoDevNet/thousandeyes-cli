@@ -152,7 +152,7 @@ thousandeyes# [command] [options]
 
 The `aid` parameter is crucial when you need to fetch information specific to a certain account group. Without specifying the correct `aid`, you may not retrieve the relevant data for the account group you intend to manage or analyze. The `aid` Parameter can be obtained with the following command.
 
-### The `show accounts` Command
+### The show accounts Command
 
 The `show accounts` command retrieves information about the account groups you have access to. Here's how to use it:
 
@@ -220,7 +220,7 @@ AID: 1234568
 -----------------------------
 ```
 
-### The `show dashboards` Command
+### The show dashboards Command
 
 To display dashboard information for a specific account group, use the `show dashboards` command with the `file human` option and the `aid` parameter.
 
