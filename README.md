@@ -2,33 +2,33 @@
 
 ## Introduction
 
-ThousandEyes-CLI is a Command Line Interface designed to facilitate interactions with the ThousandEyes API. It offers a familiar experience to Cisco device users through a set of `show` commands, mirroring the functionality of a network operating system CLI.
+ThousandEyes-CLI is a Command Line Interface that makes it easier to work with the ThousandEyes API, offering `show` commands similar to those used in Cisco network device CLIs.
 
 ## Problem Statement
 
-APIs can be complex and intimidating for users, often requiring a significant investment of time to learn. This complexity can be a barrier for users of the ThousandEyes platform.
+APIs can be difficult and overwhelming, which can discourage users from using the ThousandEyes platform.
 
 ## Solution
 
-ThousandEyes-CLI serves as an intuitive translator between Cisco command-line syntax and the ThousandEyes API, streamlining the user experience.
+ThousandEyes-CLI turns Cisco CLI commands into ThousandEyes API calls, making the experience more straightforward for users.
 
 ## What You’ll Learn
 
-By using ThousandEyes-CLI, you will learn how to:
+With ThousandEyes-CLI, you will learn how to:
 
-- Navigate and execute commands in a CLI environment.
-- Interact with the ThousandEyes API using simplified commands.
-- Output and manage data in various formats like JSON, YAML, CSV, and human-readable text.
-- Set and use environment variables to streamline your workflow.
+- Use CLI commands and navigate the interface.
+- Interact with the ThousandEyes API more easily.
+- Display data in formats like JSON, YAML, CSV, or plain text.
+- Set and apply environment variables to make your work more efficient.
 
 ## What You’ll Need
 
-To use ThousandEyes-CLI, you will need:
+To get started with ThousandEyes-CLI, you need:
 
-- A computer with Python installed.
-- Access to the command line terminal.
+- A computer with Python.
+- Access to a command line terminal.
 - The ThousandEyes API Bearer Token.
-- Basic knowledge of command-line operations and syntax.
+- A basic understanding of CLI commands and syntax.
 
 ## Key Features
 
