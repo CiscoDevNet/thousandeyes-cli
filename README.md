@@ -148,7 +148,13 @@ The ThousandEyes-CLI commands follow a simple and intuitive syntax. To execute a
 thousandeyes# [command] [options]
 ```
 
+### Emphasizing the Importance of the `aid` Parameter
+
+The `aid` parameter is crucial when you need to fetch information specific to a certain account group. Without specifying the correct `aid`, you may not retrieve the relevant data for the account group you intend to manage or analyze. The  `aid` Parameter can be obtained with the following command.
+
 ### The `show accounts` Command
+
+The `aid` parameter is crucial when you need to fetch information specific to a certain account group. Without specifying the correct `aid`, you may not retrieve the relevant data for the account group you intend to manage or analyze.
 
 The `show accounts` command retrieves information about the account groups you have access to. Here's how to use it:
 
