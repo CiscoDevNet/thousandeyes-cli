@@ -117,6 +117,8 @@ When prompted, paste your Bearer Token into the console. Make sure to keep your 
 Bearer Authentication Token:
 ```
 
+**Note:** If you change or regenerate your Bearer Token, you will need to update your environment variable with the new token.
+
 ## Available Commands
 
 ThousandEyes-CLI offers a range of commands that let you retrieve information from the ThousandEyes API. Here are some examples:
