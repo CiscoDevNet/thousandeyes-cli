@@ -87,13 +87,13 @@ In the ThousandEyes-CLI directory, there's a `requirements.txt` file. Install th
 pip install -r requirements.txt
 ```
 
-```## Usage Instructions
+## Usage Instructions
 
-To start using ThousandEyes-CLI, you'll need to open your command line terminal and run the Python script. Here's how:
+To use ThousandEyes-CLI, follow these steps:
 
 1. Open your command line terminal.
-2. Navigate to the directory where the `thousandeyes-cli.py` script is located.
-3. Execute the script by typing:
+2. Go to the folder with `thousandeyes-cli.py`.
+3. Run the script with:
 
 ```shell
 python thousandeyes-cli.py
@@ -101,15 +101,15 @@ python thousandeyes-cli.py
 
 ## Authentication
 
-You will need to authenticate with the ThousandEyes API using a Bearer Token.
+Authenticate using a Bearer Token from the ThousandEyes API.
 
-To obtain your Bearer Token, follow the detailed steps provided in the ThousandEyes API documentation on authentication:
+Get your Bearer Token by following the instructions in the ThousandEyes API documentation:
 
 [ThousandEyes API Authentication Guide](https://developer.cisco.com/docs/thousandeyes/authentication/#authentication)
 
-You have the option to enter it each time you start a new session or save it as an environment variable for convenience, as described in the "Persisting Environment Variables for Bearer Authentication" section.
+You can input your Bearer Token each time or save it as an environment variable for repeated use, as explained in the "Persisting Environment Variables for Bearer Authentication" section.
 
-When prompted, paste your Bearer Token into the console. Make sure to keep your token secure and do not share it with others.
+When asked, enter your Bearer Token in the console. Keep your token private and don't share it.
 
 ```
 # python3.11 thousandeyes-cli.py
@@ -270,45 +270,42 @@ File created: ./output/dashboards_20240710_153734.human
 
 To view the contents of the saved file, navigate to the `output` directory and use the `cat` command.
 
-With these commands, you'll be able to navigate and use ThousandEyes-CLI effectively, making your interactions with the ThousandEyes API much simpler.
-
 ## Persisting Environment Variables for Bearer Authentication
 
-To streamline your workflow and eliminate the need to input your Bearer Authentication Token repeatedly, you can save it as a persistent environment variable on your system. Follow the instructions below for your specific operating system:
+Save your Bearer Token as an environment variable to avoid entering it every time:
 
 **macOS and Linux:**
 
-1. Open the Terminal application.
-2. Type the following command, replacing `your_token_here` with your actual Bearer Authentication Token:
+1. Open Terminal.
+2. Run this command, replacing `your_token_here` with your token:
    ```
    echo 'export TE_BEARER="your_token_here"' >> ~/.bash_profile
    ```
-   If you are using a shell other than bash, such as zsh (which is the default on newer versions of macOS), you should instead append the export command to the `~/.zshrc` file:
+   For zsh (default on newer macOS), use `~/.zshrc` instead:
    ```
    echo 'export TE_BEARER="your_token_here"' >> ~/.zshrc
    ```
-3. Save the changes and close the Terminal.
-4. To apply the changes immediately, you can source the profile file with the command `source ~/.bash_profile` for bash or `source ~/.zshrc` for zsh.
+3. Restart the Terminal.
 
 **Windows:**
 
-1. Press `Win + R`, type `cmd`, and press `Enter` to open the Command Prompt.
-2. Enter the following command, again substituting `your_token_here` with your actual token:
+1. Press `Win + R`, type `cmd`, and hit `Enter`.
+2. Type this command with your token:
    ```
    setx TE_BEARER "your_token_here" /M
    ```
-   The `/M` flag sets the variable system-wide. If you omit this flag, the variable will be set for the current user only.
-3. Close the Command Prompt.
+   Use `/M` for a system-wide variable, or omit it for the current user only.
+3. Restart Command Prompt.
 
-**Important Notes:**
+**Notes:**
 
-- After setting the environment variable, you may need to restart your terminal (macOS/Linux) or command prompt (Windows) for the changes to take effect.
-- Environment variables set in this way will persist across system reboots, ensuring your Bearer Authentication Token is always readily available for your sessions.
+- Restart your terminal or command prompt to apply the changes.
+- These variables will remain after system restarts, keeping your token ready for use.
 
 ## Important Disclaimer
 
-ThousandEyes-CLI is a community-created and maintained tool. It is not supported by the ThousandEyes support team or engineering. Users should utilize this tool with the understanding that it is independent of official ThousandEyes resources.
+ThousandEyes-CLI is community-created and not officially supported by ThousandEyes. Use it knowing it's separate from official ThousandEyes tools.
 
 ## Conclusion
 
-Congratulations on taking the first step towards simplifying your interactions with the ThousandEyes API using the ThousandEyes-CLI tool. You've equipped yourself with a powerful command-line interface that enhances your productivity and bridges the gap between Cisco CLI familiarity and API complexity.
+You're now ready to use ThousandEyes-CLI to make working with the ThousandEyes API easier, leveraging your Cisco CLI knowledge.
