@@ -75,11 +75,11 @@ Open your command line terminal. You will need to navigate to the directory wher
 cd path/to/thousandeyes-cli
 ```
 
-Make sure to replace path/to/thousandeyes-cli with the actual path to the directory where you extracted the ThousandEyes-CLI files.
+Make sure to replace `path/to/thousandeyes-cli` with the actual path to the directory where you extracted the ThousandEyes-CLI files.
 
 4. **Install Dependencies**
 
-Inside the ThousandEyes-CLI directory, you'll find a file named requirements.txt. This file lists all the Python libraries that need to be installed for the CLI tool to work properly. Install these dependencies by running the following command:
+Inside the ThousandEyes-CLI directory, you'll find a file named `requirements.txt`. This file lists all the Python libraries that need to be installed for the CLI tool to work properly. Install these dependencies by running the following command:
 
 ```shell
 pip install -r requirements.txt
