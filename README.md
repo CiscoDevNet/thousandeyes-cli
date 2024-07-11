@@ -32,14 +32,14 @@ To get started with ThousandEyes-CLI, you need:
 
 ## Key Features
 
-- **Usability**: Designed for ease of use and extensibility.
-- **Single Input Bearer Token**: Only needs the ThousandEyes API Bearer Token once per session.
-- **Multiple Data Formats**: Supports JSON, YAML, CSV, and human-readable output.
-- **Data Output Redirect**: Allows users to direct output to either the console or a file.
+- **Ease of Use**: Simple design for straightforward use and customization.
+- **Single Bearer Token Entry**: Enter the ThousandEyes API Bearer Token just once each session.
+- **Various Data Formats**: Choose from JSON, YAML, CSV, or text for output.
+- **Output Control**: Send output to the screen or save it to a file.
 
 ## Dependencies
 
-ThousandEyes-CLI requires these Python libraries:
+ThousandEyes-CLI needs the following Python libraries:
 
 - os
 - re
@@ -55,39 +55,39 @@ ThousandEyes-CLI requires these Python libraries:
 - jinja2
 - prompt_toolkit
 
-This application was developed using Python 3.11. To ensure compatibility and proper functioning of ThousandEyes-CLI, please make sure you have Python 3.11
+Use Python 3.11 for compatibility with ThousandEyes-CLI.
 
 ## Getting Started
 
-Follow these steps to set up your system:
+To set up ThousandEyes-CLI:
 
 1. **Download the ZIP File**
 
-Begin by downloading the ZIP file containing the ThousandEyes-CLI source code and related files. You can find this file on this repository page.
-   
+Download the ZIP file with the source code from this repository.
+
 2. **Unzip the File**
 
-Once the download is complete, locate the ZIP file on your computer and extract its contents. You can do this by right-clicking the file and selecting "Extract All..." on Windows, or by double-clicking the file on macOS.
+Find the ZIP file on your computer and extract it. Use "Extract All..." on Windows or double-click the file on macOS.
 
 3. **Navigate to the Directory**
 
-Open your command line terminal. You will need to navigate to the directory where you've extracted the files. You can do this by using the `cd` (change directory) command followed by the path to the directory. For example:
+Use the command line to go to the extracted files' directory:
 
 ```shell
 cd path/to/thousandeyes-cli
 ```
 
-Make sure to replace `path/to/thousandeyes-cli` with the actual path to the directory where you extracted the ThousandEyes-CLI files.
+Replace `path/to/thousandeyes-cli` with the actual directory path.
 
 4. **Install Dependencies**
 
-Inside the ThousandEyes-CLI directory, you'll find a file named `requirements.txt`. This file lists all the Python libraries that need to be installed for the CLI tool to work properly. Install these dependencies by running the following command:
+In the ThousandEyes-CLI directory, there's a `requirements.txt` file. Install the listed libraries with:
 
 ```shell
 pip install -r requirements.txt
 ```
 
-## Usage Instructions
+```## Usage Instructions
 
 To start using ThousandEyes-CLI, you'll need to open your command line terminal and run the Python script. Here's how:
 
