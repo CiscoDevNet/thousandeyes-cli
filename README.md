@@ -99,7 +99,13 @@ python thousandeyes-cli.py
 
 ## Authentication
 
-Before you can start issuing commands, you'll need to enter your Bearer Token. This token is essential for authenticating with the ThousandEyes API and ensuring that your commands are executed successfully.
+Before you can start using ThousandEyes-CLI, you'll need to authenticate with the ThousandEyes API using a Bearer Token. This token is a unique identifier that grants you access to the API and ensures secure communication between the CLI tool and ThousandEyes services.
+
+To obtain your Bearer Token, follow the detailed steps provided in the ThousandEyes API documentation on authentication:
+
+[ThousandEyes API Authentication Guide](https://developer.cisco.com/docs/thousandeyes/authentication/#authentication)
+
+Once you have your Bearer Token, you can proceed to set it up within the CLI tool. You have the option to enter it each time you start a new session or save it as an environment variable for convenience, as described in the "Persisting Environment Variables for Bearer Authentication" section.
 
 When prompted, paste your Bearer Token into the console. Make sure to keep your token secure and do not share it with others.
 
