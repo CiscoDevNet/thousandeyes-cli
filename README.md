@@ -99,7 +99,7 @@ python thousandeyes-cli.py
 
 ## Authentication
 
-Before you can start using ThousandEyes-CLI, you'll need to authenticate with the ThousandEyes API using a Bearer Token. This token is a unique identifier that grants you access to the API and ensures secure communication between the CLI tool and ThousandEyes services.
+You will need to authenticate with the ThousandEyes API using a Bearer Token. This token is a unique identifier that grants you access to the API and ensures secure communication between the CLI tool and ThousandEyes services.
 
 To obtain your Bearer Token, follow the detailed steps provided in the ThousandEyes API documentation on authentication:
 
