@@ -37,14 +37,6 @@ To use ThousandEyes-CLI, you will need:
 - **Multiple Data Formats**: Supports JSON, YAML, CSV, and human-readable output.
 - **Data Output Redirect**: Allows users to direct output to either the console or a file.
 
-## Getting Started
-
-Before using ThousandEyes-CLI, ensure Python is installed on your system. Install the necessary Python libraries with the following command:
-
-```shell
-pip install -r requirements.txt
-```
-
 ## Dependencies
 
 ThousandEyes-CLI requires these Python libraries:
@@ -62,6 +54,14 @@ ThousandEyes-CLI requires these Python libraries:
 - datetime
 - jinja2
 - prompt_toolkit
+
+## Getting Started
+
+Before using ThousandEyes-CLI, ensure Python is installed on your system. Install the necessary Python libraries with the following command:
+
+```shell
+pip install -r requirements.txt
+```
 
 ## Usage Instructions
 
