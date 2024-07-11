@@ -55,6 +55,8 @@ ThousandEyes-CLI requires these Python libraries:
 - jinja2
 - prompt_toolkit
 
+This application was developed using Python 3.11. To ensure compatibility and proper functioning of ThousandEyes-CLI, please make sure you have Python 3.11
+
 ## Getting Started
 
 Welcome to the initial setup guide for ThousandEyes-CLI. To get started, you'll need to prepare your environment by installing the necessary dependencies. Follow these steps to set up your system:
