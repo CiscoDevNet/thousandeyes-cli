@@ -29,7 +29,7 @@ def api_get_data(token: str, resource: str, aid: Optional[str] = None) -> Union[
         return response.json()
     except requests.exceptions.HTTPError as http_err:
         error_messages = {
-            401: "Error: Unauthorized. Check your credentials.",
+            401: "Error: Invalid Token. Check your Bearer Token.",
             403: "Error: Forbidden. You don't have the necessary permissions.",
             404: f"Error: Not Found. The resource {resource} was not found.",
             429: "Error: Too Many Requests. You've hit the rate limit.",
