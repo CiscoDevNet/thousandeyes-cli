@@ -181,13 +181,6 @@ thousandeyes# show accounts
             "isDefaultAccountGroup": false,
             "organizationName": "Organization #1234"
         },
-        {
-            "accountGroupName": "user3_account",
-            "aid": "1234569",
-            "isCurrentAccountGroup": false,
-            "isDefaultAccountGroup": false,
-            "organizationName": "Organization #1234"
-        }
     ]
 }
 ```
@@ -206,7 +199,6 @@ thousandeyes# show accounts file csv
 "accountGroupName","AID"
 "user1_account","1234567"
 "user2_account","1234568"
-"user3_account","1234569"
 ```
 
 For a human-readable format, use `file human`.
@@ -225,9 +217,6 @@ AID: 1234567
 -----------------------------
 Account Group Name: user2_account
 AID: 1234568
------------------------------
-Account Group Name: user3_account
-AID: 1234569
 -----------------------------
 ```
 
@@ -261,16 +250,6 @@ Dashboard:
   Modified By: 1234567
   Modified Date: 2024-06-03T22:18:32Z
   Private: True
-  Default for User: False
-  Default for Account: False
-
-Dashboard:
-  ID: 668ef8976b26111c15d111f5
-  Title: ThousandEyes Built-in: Agent Alerts
-  Created By: None
-  Modified By: None
-  Modified Date: None
-  Private: False
   Default for User: False
   Default for Account: False
 ```
