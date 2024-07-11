@@ -59,7 +59,7 @@ This application was developed using Python 3.11. To ensure compatibility and pr
 
 ## Getting Started
 
-Welcome to the initial setup guide for ThousandEyes-CLI. To get started, you'll need to prepare your environment by installing the necessary dependencies. Follow these steps to set up your system:
+Follow these steps to set up your system:
 
 1. **Download the ZIP File**
 
